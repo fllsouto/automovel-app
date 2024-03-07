@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.AutomovelTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2024-03-07T15:42:05" hostname="Adrastea" time="0.0">
+  <properties/>
+  <testcase name="umAutomovelDeveTerDuasOuQuatroRodas" classname="test.java.AutomovelTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="umCarroTemQueTerQuatroRodas" classname="test.java.AutomovelTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
