@@ -2,7 +2,7 @@ package main.java;
 
 import main.java.AvaliacaoSeguranca;
 
-public class Automovel {
+public abstract class Automovel {
 	private String cor;
 	private int quantidadeDeRodas;
 	private int ano;
