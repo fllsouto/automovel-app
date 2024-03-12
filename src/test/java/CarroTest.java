@@ -4,6 +4,8 @@ import org.junit.Test;
 import main.java.Carro;
 import main.java.factory.AutomovelFactory;
 import main.java.AvaliacaoSeguranca;
+import main.java.Cores;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,11 +16,11 @@ public class CarroTest {
     @Test
     public void criaUmCarro() {
         AvaliacaoSeguranca avaliacao = new AvaliacaoSeguranca(7.5, LocalDateTime.now());
-        Carro novoCarro = new Carro("Branco", 2020, avaliacao);
+        Carro novoCarro = new Carro(Cores.WHITE, 2020, avaliacao);
         
 
         // assertThat(valorObtido).isEqualTo(valorEsperado)
-        assertThat(novoCarro.getCor()).isEqualTo("Branco");
+        assertThat(novoCarro.getCor()).isEqualTo("<BRANCO>");
         assertThat(novoCarro.getQuantidadeDeRodas()).isEqualTo(4);
         assertThat(novoCarro.getAno()).isEqualTo(2020);
         assertThat(novoCarro.getTipo()).isEqualTo("<CARRO>");

@@ -1,16 +1,17 @@
 package main.java;
 
 import main.java.AvaliacaoSeguranca;
+import main.java.Cores;
 
 public abstract class Automovel {
-	private String cor;
+	private Cores cor;
 	private int quantidadeDeRodas;
 	private int ano;
     private String tipo;
     private AvaliacaoSeguranca avaliacao;
 
 
-	public Automovel(String cor, int quantidadeDeRodas, int ano, String tipo, AvaliacaoSeguranca avaliacao) {
+	public Automovel(Cores cor, int quantidadeDeRodas, int ano, String tipo, AvaliacaoSeguranca avaliacao) {
 		this.cor = cor;
 		this.quantidadeDeRodas = quantidadeDeRodas;
 		this.ano = ano;
@@ -18,7 +19,7 @@ public abstract class Automovel {
         this.avaliacao = avaliacao;
 	}
 
-    public String getCor() {
+    public Cores getCor() {
         return cor;
     }
 

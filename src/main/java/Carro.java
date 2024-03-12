@@ -1,5 +1,7 @@
 package main.java;
 
+import main.java.Cores;
+
 public class Carro extends Automovel {
 
     public static String TIPO = "<CARRO>";
@@ -8,7 +10,7 @@ public class Carro extends Automovel {
     private String modeloVolante;
     private int numeroAirBags;
 
-    public Carro(String cor, int ano, AvaliacaoSeguranca avaliacao) {
+    public Carro(Cores cor, int ano, AvaliacaoSeguranca avaliacao) {
         super(cor, QUANTIDADE_DE_RODAS, ano, TIPO, avaliacao); 
     }
 

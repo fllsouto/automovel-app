@@ -4,6 +4,7 @@ import main.java.Automovel;
 import main.java.AvaliacaoSeguranca;
 import main.java.Carro;
 import main.java.Moto;
+import main.java.Cores;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +18,7 @@ public class AutomovelFactory {
     //     throw new IllegalArgumentException("Quantidade de rodas precisa ser igual a 2 ou 4");
 	// }
 
-    public static Carro criaCarro(String cor, int ano, AvaliacaoSeguranca avaliacao) {
+    public static Carro criaCarro(Cores cor, int ano, AvaliacaoSeguranca avaliacao) {
         if (ano < 2000) {
             throw new IllegalArgumentException("O ano do carro precisa ser maior ou igual a 2000!");
         }
@@ -29,7 +30,7 @@ public class AutomovelFactory {
         return new Carro(cor, ano, avaliacao);
     }
 
-    public static Moto criaMoto(String cor, int ano, AvaliacaoSeguranca avaliacao) {
+    public static Moto criaMoto(Cores cor, int ano, AvaliacaoSeguranca avaliacao) {
         return new Moto(cor, ano, avaliacao);
     }
 }
