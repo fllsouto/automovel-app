@@ -19,8 +19,8 @@ public abstract class Automovel {
         this.avaliacao = avaliacao;
 	}
 
-    public Cores getCor() {
-        return cor;
+    public String getCor() {
+        return cor.getCor();
     }
 
 
