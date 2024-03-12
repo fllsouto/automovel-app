@@ -4,6 +4,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import main.java.Automovel;
+import main.java.Carro;
 import main.java.AvaliacaoSeguranca;
 import main.java.factory.AutomovelFactory;
 
@@ -18,7 +19,8 @@ public class AutomovelTest {
     public void euPossoCriarUmNovoAutomovel() {
         AvaliacaoSeguranca avaliacao = new AvaliacaoSeguranca(7.5, LocalDateTime.now());
 
-        Automovel automovel = new Automovel("Vermelho", 4, 2023, "Carro", avaliacao);
+        //Automovel automovel = new Automovel("Vermelho", 4, 2023, "Carro", avaliacao);
+        Automovel automovel = new Carro("Vermelho", 2023, avaliacao);
 
         assertThat(automovel.getCor()).isEqualTo("Vermelho");
         assertThat(automovel.getQuantidadeDeRodas()).isEqualTo(4);
@@ -26,52 +28,60 @@ public class AutomovelTest {
         assertThat(automovel.getTipo()).isEqualTo("Carro");
     }
 
-    @Test
-    @Ignore
-    public void umAutomovelDeveTerDuasOuQuatroRodas() {
-        int quantidadeDeRodasDeUmCarro = 4;
-        Automovel carro = criaInstanciaAutomovel("Vermelho", 4, 2018, "carro");
+    // Esses testes ainda fazem sentido?
 
-        assertThat(carro.getCor()).isEqualTo("Vermelho");
-        assertThat(carro.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmCarro);
-        assertThat(carro.getAno()).isEqualTo(2018);
-        assertThat(carro.getTipo()).isEqualTo("<CARRO>");
+    // @Test
+    // @Ignore
+    // public void umAutomovelDeveTerDuasOuQuatroRodas() {
+    //     int quantidadeDeRodasDeUmCarro = 4;
+    //     Automovel carro = criaInstanciaAutomovel("Vermelho", 4, 2018, "carro");
 
-        Automovel moto = criaInstanciaAutomovel("Branca", 2, 2010, "moto");
-        int quantidadeDeRodasDeUmaMoto = 2;
+    //     assertThat(carro.getCor()).isEqualTo("Vermelho");
+    //     assertThat(carro.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmCarro);
+    //     assertThat(carro.getAno()).isEqualTo(2018);
+    //     assertThat(carro.getTipo()).isEqualTo("<CARRO>");
 
-        Automovel superCaminhao = new Automovel("Vermelho", 20, 2025, "Super-Caminhão", null);
+    //     Automovel moto = criaInstanciaAutomovel("Branca", 2, 2010, "moto");
+    //     int quantidadeDeRodasDeUmaMoto = 2;
 
-        assertThat(moto.getCor()).isEqualTo("Branca");
-        assertThat(moto.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmaMoto);
-        assertThat(moto.getAno()).isEqualTo(2010);
-        assertThat(moto.getTipo()).isEqualTo("<MOTO>");
-    }
+    //     Automovel superCaminhao = new Automovel("Vermelho", 20, 2025, "Super-Caminhão", null);
 
-    @Test
-    @Ignore
-    public void umCarroTemQueTerQuatroRodas() {
-        int quantidadeDeRodasDeUmCarro = 4;
+    //     assertThat(moto.getCor()).isEqualTo("Branca");
+    //     assertThat(moto.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmaMoto);
+    //     assertThat(moto.getAno()).isEqualTo(2010);
+    //     assertThat(moto.getTipo()).isEqualTo("<MOTO>");
+    // }
 
-        Automovel carro = criaInstanciaAutomovel("Vermelho", 4, 2018, "carro");
-        assertThat(carro.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmCarro);
-        assertThat(carro.getTipo()).isEqualTo("<CARRO>");
-    }
+    // Posso mover isso para CarroTest? Tem necessidade? Pode acontecer redundância? Explique
 
-    private Automovel criaInstanciaAutomovel(String cor, int quantidadeDeRodas, int ano, String tipo) {
-        AvaliacaoSeguranca avaliacao = new AvaliacaoSeguranca(7.5, LocalDateTime.now());
+    // @Test
+    // @Ignore
+    // public void umCarroTemQueTerQuatroRodas() {
+    //     int quantidadeDeRodasDeUmCarro = 4;
 
-        if(tipo.equals("moto")) {
-            return AutomovelFactory.criaMoto(cor, ano, avaliacao);
-        }
+    //     Automovel carro = criaInstanciaAutomovel("Vermelho", 4, 2018, "carro");
+    //     assertThat(carro.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmCarro);
+    //     assertThat(carro.getTipo()).isEqualTo("<CARRO>");
+    // }
+
+    // Esse método não está sendo mais executada, então pode ser apagado
+
+    // private Automovel criaInstanciaAutomovel(String cor, int quantidadeDeRodas, int ano, String tipo) {
+    //     AvaliacaoSeguranca avaliacao = new AvaliacaoSeguranca(7.5, LocalDateTime.now());
+
+    //     if(tipo.equals("moto")) {
+    //         return AutomovelFactory.criaMoto(cor, ano, avaliacao);
+    //     }
 
         
-        if (tipo.equals("carro")) {
-            return AutomovelFactory.criaCarro(cor, ano, avaliacao);
-        }
+    //     if (tipo.equals("carro")) {
+    //         return AutomovelFactory.criaCarro(cor, ano, avaliacao);
+    //     }
 
-        return null;
-    }
+    //     return null;
+    // }
+
+    // Vamos apagar essas especificações, não fazem mais sentido
 
     // Testes não cobertos que devem dar exceção (Bônus)
     // 1. Criar um automóvel sem roda
