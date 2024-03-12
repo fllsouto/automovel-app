@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.CarroTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-03-07T15:42:05" hostname="Adrastea" time="0.006">
-  <properties/>
-  <testcase name="criaUmCarro" classname="test.java.CarroTest" time="0.005"/>
-  <testcase name="aClasseCarroDeveTerDadosDefault" classname="test.java.CarroTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
