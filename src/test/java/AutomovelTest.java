@@ -15,6 +15,18 @@ import java.time.LocalDateTime;
 public class AutomovelTest {
 
     @Test
+    public void euPossoCriarUmNovoAutomovel() {
+        AvaliacaoSeguranca avaliacao = new AvaliacaoSeguranca(7.5, LocalDateTime.now());
+
+        Automovel automovel = new Automovel("Vermelho", 4, 2023, "Carro", avaliacao);
+
+        assertThat(automovel.getCor()).isEqualTo("Vermelho");
+        assertThat(automovel.getQuantidadeDeRodas()).isEqualTo(4);
+        assertThat(automovel.getAno()).isEqualTo(2023);
+        assertThat(automovel.getTipo()).isEqualTo("Carro");
+    }
+
+    @Test
     @Ignore
     public void umAutomovelDeveTerDuasOuQuatroRodas() {
         int quantidadeDeRodasDeUmCarro = 4;
@@ -27,6 +39,8 @@ public class AutomovelTest {
 
         Automovel moto = criaInstanciaAutomovel("Branca", 2, 2010, "moto");
         int quantidadeDeRodasDeUmaMoto = 2;
+
+        Automovel superCaminhao = new Automovel("Vermelho", 20, 2025, "Super-Caminhão", null);
 
         assertThat(moto.getCor()).isEqualTo("Branca");
         assertThat(moto.getQuantidadeDeRodas()).isEqualTo(quantidadeDeRodasDeUmaMoto);
